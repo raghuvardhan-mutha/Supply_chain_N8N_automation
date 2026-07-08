@@ -147,6 +147,8 @@ Built as part of a Supply Chain Analytics learning challenge using educational r
 
 **Mutha Raghu Vardhan**
 Financial / Data Analyst — SQL · PostgreSQL · n8n · Supabase · Quadratic · Python · Business Analytics
+raghuvardhan.mutha@gmail.com
+linkedln
 
 ## License
 
@@ -155,4 +157,3 @@ MIT — see [LICENSE](LICENSE).
 ---
 
 ⭐ If you found this project useful, consider giving it a star.
-](https://github.com/raghuvardhan-mutha/Supply_chain_N8N_automation/blob/main/README.md)
