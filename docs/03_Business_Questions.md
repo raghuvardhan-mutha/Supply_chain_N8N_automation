@@ -2,9 +2,9 @@
 
 ## Overview
 
-The following business questions guided the analysis of customer orders, delivery timelines, and fulfillment quality. They also form the original exercise brief this project was built against (Codebasics + Quadratic).
+The following business questions guided the analysis of customer orders, delivery timelines, and fulfillment quality, and shaped the design of the pipeline and dashboards in this project.
 
-## Core Exercise Questions
+## Core Questions
 
 1. What is the total revenue loss attributed to undelivered orders?
 2. Which customers have the most significant On-Time In-Full (OTIF) discrepancies?
@@ -48,5 +48,3 @@ Total Orders · Total Order Lines · Total Order Value · Line Fill Rate · Volu
 ## Conclusion
 
 These business questions form the foundation of the analytical workflow. By answering them using data stored in Supabase and analyzed in Quadratic, the project provides meaningful insight into supply chain performance and supports informed business decisions.
-
-> Source exercise brief: Codebasics × Quadratic "Supply Chain Analytics" challenge.
