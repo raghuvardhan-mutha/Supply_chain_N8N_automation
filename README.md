@@ -1,4 +1,4 @@
-[# 📦 AI-Powered Supply Chain Analytics & Workflow Automation
+# 📦 AI-Powered Supply Chain Analytics & Workflow Automation
 
 ### End-to-End Data Pipeline using n8n, Supabase (PostgreSQL) & Quadratic
 
@@ -8,9 +8,7 @@ An end-to-end Supply Chain Analytics solution that automates the ingestion, tran
 
 n8n monitors Gmail for incoming daily sales reports, extracts and validates CSV attachments, and loads them into **Supabase PostgreSQL**. **Quadratic** then connects to Postgres to perform AI-assisted transformation, calculate supply chain KPIs, and produce the final dashboards.
 
-![Quadratic dashboard](https://github.com/raghuvardhan-mutha/Supply_chain_N8N_automation/blob/cb4fe207dd7ee11c5db00800abe3de81a30c1a3e/images/quadratic-dashboard.png)
-
-## Section Title
+![Quadratic Dashboard](images/quadratic-dashboard.png)
 
 ## Why This Project
 
@@ -73,7 +71,7 @@ Fact Tables    Dimension Tables  Target Tables
 | In-Full Delivery % | 48.2% |
 | **OTIF %** | **26.6%** |
 
-The headline finding: Volume Fill Rate is strong, but **On-Time Delivery is the primary drag on OTIF**, not incomplete shipments. Full analysis: [`docs/07_Business_Insights.md`](docs/07_Business_Insights.md) · Recommendations: [`docs/08_Recommendations.md`](docs/08_Recommendations.md).
+**Headline finding:** Volume Fill Rate is strong, but **On-Time Delivery is the primary drag on OTIF**, not incomplete shipments. Full analysis: [`docs/07_Business_Insights.md`](docs/07_Business_Insights.md) · Recommendations: [`docs/08_Recommendations.md`](docs/08_Recommendations.md).
 
 ## Repository Structure
 
@@ -81,16 +79,15 @@ The headline finding: Volume Fill Rate is strong, but **On-Time Delivery is the 
 Supply-Chain-AI-Automation/
 ├── README.md
 ├── LICENSE
-├── CHANGELOG.md
-├── CONTRIBUTING.md
 ├── .gitignore
-├── workflow.json              ← importable n8n workflow
+├── .gitattributes
+├── workflow.json               ← importable n8n workflow
 │
-├── data/                      ← sample CSV dataset (dimension + fact tables)
-├── sql/                       ← schema, load notes, KPI & analytical queries, views
-├── dashboards/                ← KPI report & Quadratic dashboard write-ups
-├── images/                    ← dashboard and pipeline screenshots
-├── docs/                      ← full project documentation
+├── data/                       ← sample CSV dataset (dimension + fact tables)
+├── sql/                        ← schema, load notes, KPI & analytical queries, views
+├── dashboards/                 ← KPI report & Quadratic dashboard write-ups
+├── images/                     ← dashboard and pipeline screenshots
+├── docs/                       ← full project documentation
 │   ├── 01_Project_Overview.md
 │   ├── 02_Business_Problem.md
 │   ├── 03_Business_Questions.md
@@ -99,18 +96,17 @@ Supply-Chain-AI-Automation/
 │   ├── 06_Data_Model.md
 │   ├── 07_Business_Insights.md
 │   ├── 08_Recommendations.md
-│   ├── 09_Future_Enhancements.md
-│   └── setup/                 ← step-by-step n8n / Supabase / Gmail OAuth setup
-└── reference/                 ← supplementary reference material
+│   └── 09_Future_Enhancements.md
+└── reference/                  ← supplementary reference material
 ```
 
 ## Quick Start
 
-1. **Set up the database:** follow [`docs/setup/02_Supabase_Setup.md`](docs/setup/02_Supabase_Setup.md) to create the schema (`sql/01_create_tables.sql`) and load the sample data (`/data`).
-2. **Set up n8n:** follow [`docs/setup/01_N8N_Local_Setup.md`](docs/setup/01_N8N_Local_Setup.md), then import [`workflow.json`](workflow.json).
-3. **Connect Gmail:** follow [`docs/setup/03_Gmail_OAuth_Setup.md`](docs/setup/03_Gmail_OAuth_Setup.md) and attach the credential to the Gmail Trigger node.
-4. **Build the dashboard:** connect Quadratic to Supabase using the parameters from step 1 — see [`dashboards/Quadratic_Dashboard.md`](dashboards/Quadratic_Dashboard.md).
-5. **Explore the KPIs:** run the queries in [`sql/03_kpi_queries.sql`](sql/03_kpi_queries.sql) and [`sql/04_analytical_queries.sql`](sql/04_analytical_queries.sql) directly in Supabase's SQL Editor.
+1. **Set up the database:** create the schema with [`sql/01_create_tables.sql`](sql/01_create_tables.sql), then load the sample data from [`data/`](data).
+2. **Set up n8n:** install n8n locally or via cloud, then import [`workflow.json`](workflow.json) directly into your workspace.
+3. **Connect Gmail:** in the imported workflow, open the Gmail Trigger node and attach your own Gmail OAuth credential (Google Cloud Console → OAuth Client → n8n Gmail node).
+4. **Build the dashboard:** connect Quadratic to your Supabase Postgres instance using the connection string from step 1 — full walkthrough in [`dashboards/Quadratic_Dashboard.md`](dashboards/Quadratic_Dashboard.md).
+5. **Explore the KPIs:** run [`sql/03_kpi_queries.sql`](sql/03_kpi_queries.sql) and [`sql/04_analytical_queries.sql`](sql/04_analytical_queries.sql) directly in Supabase's SQL Editor.
 
 ## Database Schema
 
@@ -143,14 +139,15 @@ More in [`images/`](images) and referenced throughout [`docs/`](docs).
 
 ## Acknowledgements
 
-Built as part of a Supply Chain Analytics learning challenge using educational resources and datasets from [Codebasics](https://codebasics.io) and [Quadratic](https://www.quadratichq.com). The implementation extends the original exercise brief ([`docs/03_Business_Questions.md`](docs/03_Business_Questions.md)) into a fully documented, reproducible, end-to-end project.
+This project was built as a self-directed, end-to-end supply chain analytics build — extending an initial practice brief into a fully documented, reproducible pipeline covering automated ingestion (n8n), storage (Supabase/PostgreSQL), and AI-assisted analysis and dashboarding (Quadratic).
 
 ## Author
 
 **Mutha Raghu Vardhan**
 Financial / Data Analyst — SQL · PostgreSQL · n8n · Supabase · Quadratic · Python · Business Analytics
-raghuvardhan.mutha@gmail.com
-linkedln
+
+📧 [raghuvardhan.mutha@gmail.com](mailto:raghuvardhan.mutha@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/raghuvardhanfinancialanalyst)
 
 ## License
 
