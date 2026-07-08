@@ -1,0 +1,36 @@
+-- =====================================================
+-- Data Loading Process
+-- =====================================================
+--
+-- Data is loaded automatically by the n8n workflow (see /workflow.json),
+-- not by running INSERT statements manually. This file documents how
+-- the load happens so the pipeline is reproducible without n8n.
+--
+-- Workflow steps:
+--   1. Gmail Trigger polls the inbox every minute for emails matching
+--      subject:"Daily sales" and downloads the CSV attachments.
+--   2. Extract From File (CSV) parses each attachment into structured rows.
+--   3. Postgres node inserts the parsed rows into Supabase.
+--
+-- Tables populated by the workflow:
+--   - fact_order_line   (from the order-line CSV attachment)
+--   - fact_aggregate    (from the delivery-aggregate CSV attachment)
+--
+-- Tables loaded once, manually, via CSV import in the Supabase Table Editor
+-- (see docs/setup/02_Supabase_Setup.md):
+--   - dim_customers
+--   - dim_products
+--   - dim_targets_orders
+--
+-- If you are reproducing this project without n8n, load the CSVs in
+-- /data using Supabase's "Import data from CSV" feature or COPY:
+--
+--   COPY dim_customers    FROM '/data/dim_customers.csv'    CSV HEADER;
+--   COPY dim_products     FROM '/data/dim_products.csv'     CSV HEADER;
+--   COPY dim_targets_orders FROM '/data/dim_targets_orders.csv' CSV HEADER;
+--   COPY fact_order_line  FROM '/data/fact_order_line.csv'  CSV HEADER;
+--   COPY fact_aggregate   FROM '/data/fact_aggregate.csv'   CSV HEADER;
+--
+-- Note: Supabase's hosted Postgres does not allow COPY FROM a local file
+-- path directly — use the Table Editor's CSV import UI instead, or load
+-- via psql \copy from a machine with a direct connection.

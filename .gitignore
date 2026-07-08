@@ -1,0 +1,30 @@
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Data files — ignored by default, EXCEPT the sample dataset
+# shipped intentionally in /data for this project.
+*.csv
+*.xlsx
+!data/*.csv
+
+# n8n local runtime files (if you run n8n from within this repo)
+.n8n/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
