@@ -1,4 +1,4 @@
-# 📦 AI-Powered Supply Chain Analytics & Workflow Automation
+[# 📦 AI-Powered Supply Chain Analytics & Workflow Automation
 
 ### End-to-End Data Pipeline using n8n, Supabase (PostgreSQL) & Quadratic
 
@@ -155,3 +155,4 @@ MIT — see [LICENSE](LICENSE).
 ---
 
 ⭐ If you found this project useful, consider giving it a star.
+](https://github.com/raghuvardhan-mutha/Supply_chain_N8N_automation/blob/main/README.md)
