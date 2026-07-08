@@ -8,7 +8,7 @@ An end-to-end Supply Chain Analytics solution that automates the ingestion, tran
 
 n8n monitors Gmail for incoming daily sales reports, extracts and validates CSV attachments, and loads them into **Supabase PostgreSQL**. **Quadratic** then connects to Postgres to perform AI-assisted transformation, calculate supply chain KPIs, and produce the final dashboards.
 
-![KPI Dashboard](images/kpi-dashboard.png)
+images/quadratic-dashboard.png
 
 ## Why This Project
 
